@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Confirm this is the correct company
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "company-number"
+}) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Confirm this is the correct company</h1>
+      {{ govukTable({
+        firstCellIsHeader: true,
+        classes: "align-top",
+        rows: [
+        [
+          {
+            text: "Company name"
+          },
+          {
+            text: "ZLC LTD"
+          }
+         ],
+        [
+          {
+            text: "Company number"
+          },
+          {
+            text: "SC393288"
+          }
+        ],
+        [
+          {
+            text: "Status"
+          },
+          {
+            html: "Active"
+          }
+        ],
+        [
+          {
+            text: "Incorporation date"
+          },
+          {
+            text: "7 November 2011"
+          }
+        ],
+        [
+          {
+            text: "Company type"
+          },
+          {
+            text: "Private limited Company"
+          }
+        ],
+        [
+          {
+            text: "Registered office address"
+          },
+          {
+            html: "Delta 606 Welton Road,<br/> Delta Office Park,<br/> Swindon,<br/> United Kingdom,<br/> SN5 7XF"
+          }
+        ]
+        ]
+      }) }}
+      {{ govukButton({
+        text: "Confirm",
+        href: "auth-screen"
+      }) }}
+    </div>
+  </div>
+{% endblock %}

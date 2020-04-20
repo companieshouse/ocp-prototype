@@ -1,44 +1,74 @@
-
 {% extends "layout.html" %}
-
-{% block pageTitle %}
-  GOV.UK Prototype Kit
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "Companies House Search",
+        href: "#"
+      },
+      {
+        text: "Upload a document to Companies House"
+      }
+    ]
+  }) }}
 {% endblock %}
-
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+        Forms Download Service</h1>
+      <p>Use this service to file a company document online that would usually be sent to us in a paper format. You can also pay for a document if it has a fee.</p>
+      <p>Check which
+        <a class="govuk-link" href="guidance">
+          documents you can file using this service</a>.</p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      {{ govukInsetText({
+  text: "This interim service has been created to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
+}) }}
 
-      <h2 class="govuk-heading-m">About this page</h2>
+      <p class="govuk-body">You'll need:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the completed document or
+          <a href="#" class="https://www.gov.uk/topic/company-registration-filing/forms">Companies House form</a>
+        </li>
+        <li>an email address
+        </li>
+        <li>the company authentication code
+        </li>
+        <li>a credit or debit card (if the document has a fee)</li>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+      </ul>
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+      {{ govukButton({
+        text: "Start now",
+        href: "sign-in",
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+        isStartButton: true
+      }) }}
+      <h2 class="govuk-heading-m">Before you start</h2>
+      <p class="govuk-body">Read the guidance for
+        <a class="govuk-link" href="guidance">uploading documents to Companies House</a>.</p>
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
+      <p class="govuk-body">There are different services available if you need to:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
+          <a href="#" class="https://www.gov.uk/file-your-company-annual-accounts">file company accounts</a>
         </li>
         <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+          <a href="#" class="https://www.gov.uk/file-your-confirmation-statement-with-companies-house">file a confirmation statement</a>
+        </li>
+        <li>
+          <a href="#" class="https://www.gov.uk/file-changes-to-a-company-with-companies-house">make changes to a company</a>
         </li>
       </ul>
     </div>
-</div>
+    <div class="govuk-grid-column-one-third">
+      <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
 
+    </div>
+  </div>
 {% endblock %}
