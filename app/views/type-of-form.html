@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% block pageTitle %}
+  Enter the company authentication code
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "auth-screen"
+}) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Types of forms from Companies House</h1>
+      <ul class="govuk-list form-list">
+        <li class="govuk-heading-s">
+          <a href="forms-limited-companies" class="govuk-link">Companies House forms for limited companies</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for limited liability partnerships</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for limited partnerships</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for Scottish limited partnerships</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for Scottish qualifying partnerships</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for overseas companies</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for European company Societas Europaea</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for European Economic Interest Groupings</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for cross border mergers</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Forms for other company legislation and registration acts</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for Insolvency Rules 2016</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for insolvency (1986)</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Companies House forms for insolvency (Scotland)</a>
+        </li>
+        <li class="govuk-heading-s">
+          <a href="#" class="govuk-link">Bilingual forms (English and Welsh) for limited companies and limited liability partnerships</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

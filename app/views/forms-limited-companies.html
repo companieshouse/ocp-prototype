@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% block pageTitle %}
+  Enter the company authentication code
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "type-of-form"
+}) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Limited companies forms</h1>
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Incorporation</h2>
+    </div>
+  </div>
+  <section class="form govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <p class="govuk-!-margin-bottom-0">Register a private or public company (IN01)</p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <a href="public/pdf/IN01_V7.pdf" class="govuk-link" target="_blank">Download</a>
+      </p>
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  <section class="form govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <p class="govuk-!-margin-bottom-0">Give notice of subscribers: company with share capital</p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <a href="public/pdf/rp07-v2.2.pdf" class="govuk-link" target="_blank">Download</a>
+      </p>
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  <section class="form govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <p class="govuk-!-margin-bottom-0">Give notice of subscribers: company not having share capital</p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <a href="public/pdf/rp07.pdf" class="govuk-link" target="_blank">Download</a>
+      </p>
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l govuk-!-margin-top-6">Accounts</h2>
+    </div>
+  </div>
+  <section class="form govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <p class="govuk-!-margin-bottom-0">Change your company accounting reference date (AA01)</p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <a href="#" class="govuk-link ">Download</a>
+      </p>
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  <section class="form govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <p class="govuk-!-margin-bottom-0">File your dormant accounts (AA02)</p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <a href="#" class="govuk-link ">Download</a>
+      </p>
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  <section class="form govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <p class="govuk-!-margin-bottom-0">Notify a removal of auditors from office by resolution (AA03)</p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <a href="#" class="govuk-link ">Download</a>
+      </p>
+    </div>
+  </section>
+</div>
+</div>
+{% endblock %}
