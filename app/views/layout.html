@@ -34,18 +34,13 @@
 {% endblock %}
 
 {% block pageTitle %}
-  Collect a Companies House document online
+  {{serviceName}}
 {% endblock %}
 
 {% block header %}
   {% include "includes/cookie-banner.html" %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
+  {% include "includes/ch-header.html" %}
+  {% include "includes/phase-banner.html" %}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}

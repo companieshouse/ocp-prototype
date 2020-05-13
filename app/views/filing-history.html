@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-{% from "govuk/components/input/macro.njk" import govukInput %}
 {% block pageTitle %}
   Enter the company authentication code
 {% endblock %}
@@ -15,107 +14,101 @@
       <span class="govuk-caption-xl">Company number: SC393288</span>
       <h1 class="govuk-heading-xl">ZLC LTD</h1>
       {{ govukTable({
-  head: [
-    {
-      text: "Date "
-    },
-    {
-      text: "Description"
-    },
-    {
-      text: "View/Download"
-    }
-  ],
-  rows: [
-    [
-      {
-        text: "31 Aug 2019"
-      },
-      {
-        text: "Directors appointment letter"
-      },
-      {
-        html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/5.pdf'>View PDF</a>"
-
-      }
-    ],
-    [
-      {
-        text: " 28 Feb 2019 "
-      },
-      {
-        text: "Authcode letter"
-      },
-      {
-        html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/6.pdf'>View PDF</a>"
-
-      }
-    ],
-    [
-      {
-        text: " 28 Feb 2019 "
-      },
-      {
-        text: "incorrect form (reject letter)"
-      },
-      {
-        html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/1.pdf'>View PDF</a>"
-
-      }
-    ],
-    [
-      {
-        text: " 28 Feb 2019 "
-      },
-      {
-        text: "incorrect director resignation (reject letter)"
-      },
-      {
-        html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/4.pdf'>View PDF</a>"
-
-      }
-    ],
-    [
-      {
-        text: " 28 Feb 2019 "
-      },
-      {
-        text: "FES Reject Letter (missing date)"
-      },
-      {
-        html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/3.pdf'>View PDF</a>"
-
-      }
-    ],
-    [
-      {
-        text: " 28 Feb 2019 "
-      },
-      {
-        text: "FES Reject (wrong version of form)"
-      },
-      {
-        html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/6.pdf'>View PDF</a>"
-
-      }
-    ],
-    [
-      {
-        text: " 28 Feb 2019 "
-      },
-      {
-        text: "FES Reject Letter (incorrect company name)"
-      },
-      {
-        html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/2.pdf'>View PDF</a>"
-      }
-    ]
-  ]
-}) }}
+        head: [
+          {
+            text: "Date "
+          },
+          {
+            text: "Description"
+          },
+          {
+            text: "View/Download"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "31 Aug 2019"
+            },
+            {
+              text: "Directors appointment letter"
+            },
+            {
+              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/5.pdf'>View PDF</a>"
+            }
+          ],
+          [
+            {
+              text: " 28 Feb 2019 "
+            },
+            {
+              text: "Authcode letter"
+            },
+            {
+              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/6.pdf'>View PDF</a>"
+            }
+          ],
+          [
+            {
+              text: " 28 Feb 2019 "
+            },
+            {
+              text: "incorrect form (reject letter)"
+            },
+            {
+              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/1.pdf'>View PDF</a>"
+            }
+          ],
+          [
+            {
+              text: " 28 Feb 2019 "
+            },
+            {
+              text: "incorrect director resignation (reject letter)"
+            },
+            {
+              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/4.pdf'>View PDF</a>"
+            }
+          ],
+          [
+            {
+              text: " 28 Feb 2019 "
+            },
+            {
+              text: "FES Reject Letter (missing date)"
+            },
+            {
+              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/3.pdf'>View PDF</a>"
+            }
+          ],
+          [
+            {
+              text: " 28 Feb 2019 "
+            },
+            {
+              text: "FES Reject (wrong version of form)"
+            },
+            {
+              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/6.pdf'>View PDF</a>"
+            }
+          ],
+          [
+            {
+              text: " 28 Feb 2019 "
+            },
+            {
+              text: "FES Reject Letter (incorrect company name)"
+            },
+            {
+              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/2.pdf'>View PDF</a>"
+            }
+          ]
+        ]
+      }) }}
       {{ govukButton({
-  text: "Sign out",
-  href: "/"
-}) }}
+        text: "Sign out",
+        href: "/"
+      }) }}
     </div>
   </div>
 {% endblock %}

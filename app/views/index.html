@@ -1,39 +1,20 @@
 {% extends "layout.html" %}
 {% block beforeContent %}
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "/"
-      },
-      {
-        text: "Companies House Search",
-        href: "#"
-      },
-      {
-        text: "Collect a Companies House document online"
-      }
-    ]
-  }) }}
+  {% include "includes/breadcrumb.html" %}
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Collect a Companies House document online</h1>
-
+      <h1 class="govuk-heading-xl">{{serviceName}}</h1>
       {{ govukInsetText({
-  text: "This interim service has been created to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
-}) }}
-
+        text: "This interim service has been created to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
+      }) }}
       {{ govukButton({
         text: "Start now",
         href: "sign-in",
         classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
         isStartButton: true
       }) }}
-
     </div>
-
   </div>
 {% endblock %}

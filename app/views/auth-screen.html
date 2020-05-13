@@ -15,15 +15,15 @@
       <form action="/auth-screen" method="post">
         {% if errorAuth == true %}
           {{ govukErrorSummary({
-        titleText: "There is a problem",
-        errorList: errorList
-      }) }}
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
           {{ govukInput({
             label: {
             text: "Enter the company authentication code",
             classes: "govuk-label--xl"
             },
-              classes: "govuk-input--width-5",
+            classes: "govuk-input--width-5",
             hint: {
               text: "You need the authentication code to submit company information for ZLC Ltd."
             },
@@ -35,22 +35,21 @@
           }) }}
         {% else %}
           {{ govukInput({
-          label: {
-          text: "Enter the company authentication code ",
-          classes: "govuk-label--xl"
-          },
+            label: {
+              text: "Enter the company authentication code ",
+              classes: "govuk-label--xl"
+            },
             classes: "govuk-input--width-10",
-          hint: {
-            text: "You need the authentication code to submit company information for ZLC Ltd."
-          },
-          id: "auth-number",
-          name: "authNumber"
-        }) }}
+            hint: {
+              text: "You need the authentication code to submit company information for ZLC Ltd."
+            },
+            id: "auth-number",
+            name: "authNumber"
+          }) }}
         {% endif %}
         <p class="govuk-body">
           <a target='blank' href='https://ewf.companieshouse.gov.uk/?_ga=2.259791299.813501771.1566987875-1638653194.1563432911'>Request an authentication code</a>
         </p>
-
         {{ govukButton({
          text: "Continue"
        }) }}
