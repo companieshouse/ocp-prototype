@@ -80,19 +80,19 @@ router.post('/company-number', function (req, res) {
 })
 
 // Auth
-router.get('/auth-screen', function (req, res) {
-  res.render('auth-screen', {
+router.get('company-authentication', function (req, res) {
+  res.render('company-authentication', {
   })
 })
 
-router.post('/auth-screen', function (req, res) {
+router.post('company-authentication', function (req, res) {
   var errors = []
   if (req.session.data['authNumber'] === '') {
     errors.push({
       text: 'Enter the company authentication code',
       href: '#auth-number'
     })
-    res.render('auth-screen', {
+    res.render('company-authenticationn', {
       errorAuth: true,
       errorList: errors
     })
