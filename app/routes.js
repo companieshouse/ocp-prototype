@@ -97,7 +97,7 @@ router.post('/auth-screen', function (req, res) {
       errorList: errors
     })
   } else {
-    res.redirect('filing-history')
+    res.redirect('view-correspondence')
   }
 })
 
