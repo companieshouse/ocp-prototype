@@ -15,15 +15,16 @@
       <h1 class="govuk-heading-xl">ZLC LTD</h1>
       {{ govukTable({
         head: [
-          {
-            text: "Date"
-          },
-          {
-            text: "Description"
-          },
-          {
-            text: "View/Download"
-          }
+
+{
+html: " <a href='' class='sort'>Date</a>"
+},
+{
+html: " <a href='' >Description</a>"
+},
+{
+html: " <a href=''>View / Download</a>"
+}
         ],
         rows: [
           [
@@ -34,7 +35,7 @@
               text: "Directors appointment letter"
             },
             {
-              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/5.pdf'>View PDF</a>"
+              html: "<a href='public/pdf/5.pdf' target=_blank'>View PDF</a><span class='govuk-visually-hidden'> of Directors appointment letter</span>"
             }
           ],
           [
@@ -42,10 +43,10 @@
               text: " 28 Feb 2019 "
             },
             {
-              text: "Authcode letter"
+              text: "Authentication code letter"
             },
             {
-              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/6.pdf'>View PDF</a>"
+              html: "<a href='public/pdf/6.pdf' target=_blank'>View PDF</a><span class='govuk-visually-hidden'> of Authentication code letter</span>"
             }
           ],
           [
@@ -56,7 +57,7 @@
               text: "incorrect form (reject letter)"
             },
             {
-              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/1.pdf'>View PDF</a>"
+              html: "<a href='public/pdf/1.pdf'target=_blank'>View PDF</a><span class='govuk-visually-hidden'> of incorrect form (rejection letter)</span>"
             }
           ],
           [
@@ -67,7 +68,7 @@
               text: "incorrect director resignation (reject letter)"
             },
             {
-              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/4.pdf'>View PDF</a>"
+              html: "<a href='public/pdf/4.pdf' target=_blank'>View PDF</a><span class='govuk-visually-hidden'> of incorrect director resignation (reject letter)</span>"
             }
           ],
           [
@@ -78,7 +79,7 @@
               text: "FES Reject Letter (missing date)"
             },
             {
-              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/3.pdf'>View PDF</a>"
+              html: "<a href='public/pdf/3.pdf' target=_blank'>View PDF</a><span class='govuk-visually-hidden'> of FES Reject Letter (missing date)</span>"
             }
           ],
           [
@@ -89,7 +90,7 @@
               text: "FES Reject (wrong version of form)"
             },
             {
-              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/6.pdf'>View PDF</a>"
+              html: "<a href='public/pdf/6.pdf' target=_blank'>View PDF</a><span class='govuk-visually-hidden'> of FES Reject (wrong version of form)</span>"
             }
           ],
           [
@@ -100,7 +101,7 @@
               text: "FES Reject Letter (incorrect company name)"
             },
             {
-              html: "<a class='govuk-link govuk-link--no-visited-state' href='public/pdf/2.pdf'>View PDF</a>"
+              html: "<a href='public/pdf/2.pdf'target=_blank'>View PDF</a><span class='govuk-visually-hidden'> of FES Reject Letter (incorrect company name)</span> (2 pages)"
             }
           ]
         ]

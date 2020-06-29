@@ -1,20 +1,58 @@
 {% extends "layout.html" %}
-{% block beforeContent %}
-  {% include "includes/breadcrumb.html" %}
+{% block pageTitle %}
+  Shortcuts
 {% endblock %}
+
+{% block beforeContent %}{% endblock %}
+
 {% block content %}
+
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">{{serviceName}}</h1>
-      {{ govukInsetText({
-        text: "This interim service has been created to enable paperless filing in response to the coronavirus (COVID-19) outbreak."
-      }) }}
-      {{ govukButton({
-        text: "Start now",
-        href: "sign-in",
-        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
-        isStartButton: true
-      }) }}
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        {% if serviceName %}
+          {{ serviceName }}
+          (prototype)
+          <span class="govuk-caption-xl">(June 2020)</span>
+        {% endif %}
+      </h1>
+
+      <h2 class="govuk-heading-m">Shortcuts</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="start">
+            Start
+          </a>
+        </li>
+        <li>
+          <a href="company-number">
+            Company number
+          </a>
+        </li>
+        <li>
+          <a href="confirm-company">
+            Confirm company
+          </a>
+        </li>
+        <li>
+          <a href="auth-screen">
+            Authentication
+          </a>
+        </li>
+        <li>
+          <a href="filing-history">
+            Filing history
+          </a>
+        </li>
+        <li>
+
+          Accessibility statement
+
+        </li>
+      </ul>
+
     </div>
   </div>
+
 {% endblock %}
