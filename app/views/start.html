@@ -3,10 +3,33 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">{{serviceName}}</h1>
+      <h1 class="govuk-heading-xl">View company correspondence</h1>
+      <p class="govuk-body-l">Use this service to view and download company correspondence.</p>
+<p class="govuk-body">You can view, download and print certain company correspondence that is also sent to the registered office address. </p>
+      <p class="govuk-body">This includes:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>reminder letters</a>
+        </li>
+        <li>penalty notices
+        </li>
+        <li>acceptance letters
+        </li>
+        <li>rejection letters
+        </li>
+      </ul>
       {{ govukInsetText({
-        text: "Content TBC."
+        text: "This interim service has been created in response to the coronavirus (COVID-19) outbreak."
       }) }}
+      <p class="govuk-body">You'll need:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the company number</a>
+        </li>
+        <li>the company authentication code
+        </li>
+        <li>to sign in to the service
+        </li>
+      </ul>
+      <p class="govuk-body">You'll need to register if you are signing in to this service for the first time. Registration takes around 5 minutes. </p>
       {{ govukButton({
         text: "Start now",
         href: "sign-in",
