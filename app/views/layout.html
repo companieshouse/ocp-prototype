@@ -34,13 +34,19 @@
 {% endblock %}
 
 {% block pageTitle %}
-  {{serviceName}}
+  GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
   {% include "includes/cookie-banner.html" %}
   {% include "includes/ch-header.html" %}
-  {% include "includes/phase-banner.html" %}
+  {# Set serviceName in config.js.
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}#}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}

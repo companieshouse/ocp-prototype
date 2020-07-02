@@ -1,80 +1,63 @@
 {% extends "layout.html" %}
+
 {% block pageTitle %}
   Sign in to Companies House
 {% endblock %}
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "index"
-  }) }}
-{% endblock %}
+
 {% block content %}
+
+  <!-- DEVS: Ignore the HTML here, it's not correct, but it means the error validation works -->
+  <style>
+    .govuk-header__content {
+      display: none;
+    }
+  </style>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half">
-      <h1 class="govuk-heading-xl">Sign in to Companies House</h1>
-      <form action="/sign-in" method="post">
-        {% if errorEmail == true or errorPassword == true %}
-          {{ govukErrorSummary({
-              titleText: "There is a problem",
-              errorList: errorList
-            }) }}
-        {% endif %}
-        {% if errorEmail == true %}
-          {{ govukInput({
-            label: {
-            text: "Email address"
-          },
-          id: "email",
-          type: "email",
-          name: "email",
-          autocomplete: "email",
-          errorMessage: {
-            text: "Enter your email address"
-          }
-          }) }}
-        {% else %}
-          {{ govukInput({
-            label: {
-            text: "Email address"
-          },
-          type: "email",
-          autocomplete: "email",
-          id: "email",
-          name: "email"
-          }) }}
-        {% endif %}
-        {% if errorPassword == true %}
-          {{ govukInput({
-          label: {
-          text: "Password"
-        },
-        id: "password",
-        name: "password",
-        type: "password",
-        errorMessage: {
-            text: "Enter your password"
-          }
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="company-number" method="GET">
+
+        <h1 class="govuk-heading-xl">
+          Sign in to Companies House
+        </h1>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" data-required="data-required" data-error="Enter your email address">
+            <legend>
+              <label class="govuk-label" for="chs-email">
+                Email address
+              </label>
+            </legend>
+            <input class="govuk-input govuk-!-width-two-thirds" id="chs-email" name="chs-email" type="text">
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" data-required="data-required" data-error="Enter your password">
+            <legend>
+              <label class="govuk-label" for="chs-password">
+                Password
+              </label>
+            </legend>
+            <input class="govuk-input govuk-!-width-two-thirds" id="chs-password" name="chs-password" type="password">
+          </fieldset>
+        </div>
+
+      </fieldset>
+
+      {{ govukButton({
+          text: "Sign in"
         }) }}
-        {% else %}
-          {{ govukInput({
-          label: {
-          text: "Password"
-        },
-        id: "password",
-        name: "password",
-        type: "password"
-        }) }}
-        {% endif %}
-        {{ govukButton({
-        text: "Sign in"
-        }) }}
-        <p>
-          <a href="" class="govuk-link govuk-link--no-visited-state">Register a new account</a>
-        </p>
-        <p>
-          <a href="" class="govuk-link govuk-link--no-visited-state">I've forgotten my password</a>
-        </p>
-      </form>
-    </div>
+    </form>
+
+    <p class="action-link">
+      <a class="button-link" id="register" href="">Register</a>
+    </p>
+    <p>
+      <a id="forgotten_password" href="">Forgotten your password?</a>
+    </p>
+
   </div>
+</div>
+
 {% endblock %}
