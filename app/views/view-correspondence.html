@@ -11,11 +11,12 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <span class="govuk-caption-xl">Company number: SC393288</span>
+      <span class="govuk-caption-xl">SC393288</span>
       <h1 class="govuk-heading-xl">ZLC LTD</h1>
+      <p class="govuk-body">View, download and print certain company correspondence that is also sent to the company's registered office address.</p>
+        </ul>
       {{ govukTable({
         head: [
-
 {
 html: " <a href='' class='sort'>Date</a>"
 },
@@ -29,10 +30,10 @@ html: " <a href=''>View / Download</a>"
         rows: [
           [
             {
-              text: "31 Aug 2019"
+              text: "31 August 2019"
             },
             {
-              text: "Directors appointment letter"
+              text: "Director's appointment letter"
             },
             {
               html: "<a href='public/pdf/5.pdf' target=_blank'>View PDF<span class='govuk-visually-hidden'> of Directors appointment letter - link opens in a new window  - 2 pages</span></a> (2 pages)"
@@ -40,7 +41,7 @@ html: " <a href=''>View / Download</a>"
           ],
           [
             {
-              text: " 28 Feb 2019 "
+              text: "6 June 2019"
             },
             {
               text: "Authentication code letter"
@@ -51,21 +52,10 @@ html: " <a href=''>View / Download</a>"
           ],
           [
             {
-              text: " 28 Feb 2019 "
+              text: "29 April 2020"
             },
             {
-              text: "incorrect form (reject letter)"
-            },
-            {
-              html: "<a href='public/pdf/1.pdf'target=_blank'>View PDF<span class='govuk-visually-hidden'> of incorrect form (rejection letter)- link opens in a new window  - 1 page</span></a> (1 page)"
-            }
-          ],
-          [
-            {
-              text: " 28 Feb 2019 "
-            },
-            {
-              text: "incorrect director resignation (reject letter)"
+              text: "Overdue CS01 letter"
             },
             {
               html: "<a href='public/pdf/4.pdf' target=_blank'>View PDF<span class='govuk-visually-hidden'> of incorrect director resignation (reject letter)- link opens in a new window  - 3 pages</span></a> (3 pages)"
@@ -73,32 +63,33 @@ html: " <a href=''>View / Download</a>"
           ],
           [
             {
-              text: " 28 Feb 2019 "
+              text: "28 April 2020"
             },
             {
-              text: "FES Reject Letter (missing date)"
+              text: "Reject letter - incorrect form"
+            },
+            {
+              html: "<a href='public/pdf/1.pdf'target=_blank'>View PDF<span class='govuk-visually-hidden'> of incorrect form (rejection letter)- link opens in a new window  - 1 page</span></a> (1 page)"
+            }
+          ],
+          [
+            {
+              text: "28 April 2020"
+            },
+            {
+              text: "Reject letter - missing date"
             },
             {
               html: "<a href='public/pdf/3.pdf' target=_blank'>View PDF<span class='govuk-visually-hidden'> of FES Reject Letter (missing date) - link opens in a new window  - 1 page</span></a> (1 page)"
             }
           ],
+
           [
             {
-              text: " 28 Feb 2019 "
+              text: "28 April 2020"
             },
             {
-              text: "FES Reject (wrong version of form)"
-            },
-            {
-              html: "<a href='public/pdf/6.pdf' target=_blank'>View PDF<span class='govuk-visually-hidden'> of FES Reject (wrong version of form)- link opens in a new window  - 1 page</span></a> (1 page)"
-            }
-          ],
-          [
-            {
-              text: " 28 Feb 2019 "
-            },
-            {
-              text: "FES Reject Letter (incorrect company name)"
+              text: "Reject letter - incorrect company name"
             },
             {
               html: "<a href='public/pdf/2.pdf'target=_blank'>View PDF<span class='govuk-visually-hidden'> of FES Reject Letter (incorrect company name) - link opens in a new window  - 2 pages</span></a> (2 pages)"
@@ -106,6 +97,7 @@ html: " <a href=''>View / Download</a>"
           ]
         ]
       }) }}
+      <p class="govuk-body">Remember to sign out to keep your information secure.</p>
       {{ govukButton({
         text: "Sign out",
         href: "/"
