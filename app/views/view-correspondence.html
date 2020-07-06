@@ -14,8 +14,8 @@
       <span class="govuk-caption-xl">SC393288</span>
       <h1 class="govuk-heading-xl">ZLC LTD</h1>
       <p class="govuk-body">You can order correspondence by date or description.</p>
-        </ul>
-      {{ govukTable({
+  </ul>
+  {{ govukTable({
         head: [
 {
 html: " <a href='' class='sort'>Date</a>"
@@ -24,7 +24,7 @@ html: " <a href='' class='sort'>Date</a>"
 html: " <a href='' >Description</a>"
 },
 {
-html: " <a href=''>View / Download</a>"
+text: "View / Download"
 }
         ],
         rows: [
@@ -97,11 +97,11 @@ html: " <a href=''>View / Download</a>"
           ]
         ]
       }) }}
-      <p class="govuk-body">Remember to sign out to keep your information secure.</p>
-      {{ govukButton({
+  <p class="govuk-body">Remember to sign out to keep your information secure.</p>
+  {{ govukButton({
         text: "Sign out",
         href: "/"
       }) }}
-    </div>
-  </div>
+</div>
+</div>
 {% endblock %}
