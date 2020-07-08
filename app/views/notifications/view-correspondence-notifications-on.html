@@ -5,7 +5,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
   text: "Back",
-  href: "company-authentication"
+  href: "javascript:history.back()"
 }) }}
 {% endblock %}
 {% block content %}
@@ -13,9 +13,16 @@
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-xl">SC393288</span>
       <h1 class="govuk-heading-xl">ZLC LTD</h1>
-      <p class="govuk-body">You can order correspondence by date or description.</p>
-  </ul>
-  {{ govukTable({
+      <p class="govuk-body">Notifications are being sent to
+        <strong>
+          user@gmail.com
+        </strong>
+      </p>
+      <a href="notifications" role="button" class="govuk-button govuk-button--secondary">
+        Change notification settings
+      </a>
+
+      {{ govukTable({
         head: [
 {
 html: " <a href='' class='sort'>Date</a>"
@@ -98,12 +105,12 @@ text: "View / Download"
         ]
       }) }}
 
-  <p class="govuk-body">Remember to sign out to keep your information secure.</p>
+      <p class="govuk-body">Remember to sign out to keep your information secure.</p>
 
-  {{ govukButton({
+      {{ govukButton({
         text: "Sign out",
         href: "/"
       }) }}
-</div>
-</div>
+    </div>
+  </div>
 {% endblock %}
